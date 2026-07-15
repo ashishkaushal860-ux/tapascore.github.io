@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    /* Navy Trust palette */
-    --background: 223 61% 15%;        /* #0f1b3d */
-    --foreground: 216 27% 93%;        /* #e8edf3 */
+    /* Pure monochrome palette */
+    --background: 0 0% 4%;            /* near-black */
+    --foreground: 0 0% 96%;           /* near-white */
 
-    --card: 213 54% 24%;              /* #1e3a5f */
-    --card-foreground: 216 27% 93%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
 
-    --popover: 213 54% 24%;
-    --popover-foreground: 216 27% 93%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
 
-    --primary: 210 46% 43%;           /* #3b6fa0 */
-    --primary-foreground: 223 61% 15%;
+    --primary: 0 0% 96%;              /* white as primary */
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 213 54% 24%;
-    --secondary-foreground: 216 27% 93%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 96%;
 
-    --muted: 213 54% 20%;
-    --muted-foreground: 216 20% 75%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 210 46% 43%;
-    --accent-foreground: 223 61% 15%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 4%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 216 27% 93%;
+    --destructive: 0 0% 30%;
+    --destructive-foreground: 0 0% 96%;
 
-    --border: 210 46% 43%;
-    --input: 213 54% 24%;
-    --ring: 210 46% 43%;
+    --border: 0 0% 22%;
+    --input: 0 0% 14%;
+    --ring: 0 0% 96%;
 
     --radius: 0rem;
 
-    --sidebar-background: 223 61% 15%;
-    --sidebar-foreground: 216 27% 93%;
-    --sidebar-primary: 210 46% 43%;
-    --sidebar-primary-foreground: 223 61% 15%;
-    --sidebar-accent: 213 54% 24%;
-    --sidebar-accent-foreground: 216 27% 93%;
-    --sidebar-border: 210 46% 43%;
-    --sidebar-ring: 210 46% 43%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 0 0% 96%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 22%;
+    --sidebar-ring: 0 0% 96%;
   }
 }
 
@@ -64,9 +64,12 @@
 
 @layer utilities {
   .tile {
-    @apply bg-card border border-primary/30 p-8;
+    @apply bg-card border border-border p-8;
   }
   .label-mono {
-    @apply text-primary font-bold text-xs uppercase tracking-[0.2em];
+    @apply text-foreground/60 font-bold text-xs uppercase tracking-[0.25em];
+  }
+  .hairline {
+    @apply border border-border;
   }
 }
