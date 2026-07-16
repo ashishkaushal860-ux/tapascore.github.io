@@ -7,7 +7,7 @@ import rfMicrowave from "@/assets/icons/rf-microwave.png.asset.json";
 import satelliteSystems from "@/assets/icons/satellite-systems.png.asset.json";
 import payloadElectronics from "@/assets/icons/payload-electronics.png.asset.json";
 
-const NAV = ["Sensors", "Satellites", "Research", "Contact"];
+const NAV = ["Sensors", "Satellites", "Research", "About", "Contact"];
 
 const CAPABILITIES = [
   { n: "01", label: "Magnetic Sensing", icon: magneticSensor.url },
