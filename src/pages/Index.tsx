@@ -1,10 +1,19 @@
+import emblem from "@/assets/icons/emblem.png.asset.json";
+import satellite from "@/assets/icons/satellite.png.asset.json";
+import earthOrbit from "@/assets/icons/earth-orbit.png.asset.json";
+import groundStation from "@/assets/icons/ground-station.png.asset.json";
+import magneticSensor from "@/assets/icons/magnetic-sensor.png.asset.json";
+import rfMicrowave from "@/assets/icons/rf-microwave.png.asset.json";
+import satelliteSystems from "@/assets/icons/satellite-systems.png.asset.json";
+import payloadElectronics from "@/assets/icons/payload-electronics.png.asset.json";
+
 const NAV = ["Sensors", "Satellites", "Research", "Contact"];
 
 const CAPABILITIES = [
-  { n: "01", label: "Magnetic Sensing" },
-  { n: "02", label: "RF & Microwave" },
-  { n: "03", label: "Satellite Systems" },
-  { n: "04", label: "Payload Electronics" },
+  { n: "01", label: "Magnetic Sensing", icon: magneticSensor.url },
+  { n: "02", label: "RF & Microwave", icon: rfMicrowave.url },
+  { n: "03", label: "Satellite Systems", icon: satelliteSystems.url },
+  { n: "04", label: "Payload Electronics", icon: payloadElectronics.url },
 ];
 
 const Index = () => {
@@ -13,8 +22,11 @@ const Index = () => {
       <div className="max-w-7xl w-full space-y-6">
         {/* Header */}
         <nav className="flex justify-between items-center py-6 border-b border-border">
-          <div className="font-display text-2xl tracking-tighter uppercase">
-            Martand<span className="text-foreground/50"> / Labs</span>
+          <div className="flex items-center gap-3">
+            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9" />
+            <div className="font-display text-2xl tracking-tighter uppercase">
+              Martand<span className="text-foreground/50"> / Labs</span>
+            </div>
           </div>
           <div className="hidden md:flex gap-8 text-xs font-semibold tracking-[0.2em] uppercase text-foreground/70">
             {NAV.map((l) => (
@@ -32,19 +44,11 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:h-[800px]">
           {/* Hero */}
           <div className="md:col-span-2 md:row-span-2 bg-card p-10 flex flex-col justify-end relative overflow-hidden border border-border">
-            {/* Orbit graphic */}
-            <div className="absolute top-8 right-8 pointer-events-none opacity-40">
-              <svg width="280" height="280" viewBox="0 0 280 280" fill="none" stroke="currentColor" strokeWidth="1">
-                <circle cx="140" cy="140" r="130" strokeDasharray="2 4" />
-                <circle cx="140" cy="140" r="90" />
-                <circle cx="140" cy="140" r="55" strokeDasharray="1 3" />
-                <circle cx="140" cy="140" r="6" fill="currentColor" />
-                <circle cx="270" cy="140" r="4" fill="currentColor" />
-                <circle cx="140" cy="50" r="3" fill="currentColor" />
-                <line x1="140" y1="10" x2="140" y2="270" strokeDasharray="1 6" opacity="0.4" />
-                <line x1="10" y1="140" x2="270" y2="140" strokeDasharray="1 6" opacity="0.4" />
-              </svg>
-            </div>
+            <img
+              src={earthOrbit.url}
+              alt="Earth orbit"
+              className="absolute top-8 right-8 w-72 h-72 object-contain opacity-40 pointer-events-none"
+            />
             <div className="label-mono mb-6 relative z-10">Engineering the next frontier</div>
             <h1 className="font-display text-5xl md:text-7xl leading-[0.9] uppercase mb-6 relative z-10">
               Magnetic <br />
@@ -72,10 +76,11 @@ const Index = () => {
           </div>
 
           {/* Orbit Coverage */}
-          <div className="tile flex flex-col justify-between">
-            <div className="label-mono">Mission Envelope</div>
-            <div className="font-display text-6xl">LEO<span className="text-xl text-foreground/60"> · GEO</span></div>
-            <div className="flex items-center gap-2 text-xs font-bold tracking-widest">
+          <div className="tile flex flex-col justify-between relative overflow-hidden">
+            <img src={satellite.url} alt="" className="absolute -top-2 -right-2 w-28 h-28 opacity-30 pointer-events-none" />
+            <div className="label-mono relative z-10">Mission Envelope</div>
+            <div className="font-display text-6xl relative z-10">LEO<span className="text-xl text-foreground/60"> · GEO</span></div>
+            <div className="flex items-center gap-2 text-xs font-bold tracking-widest relative z-10">
               <span className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
               TELEMETRY ONLINE
             </div>
@@ -86,9 +91,12 @@ const Index = () => {
             <div className="label-mono mb-4">Core Capabilities</div>
             <div className="grid grid-cols-2 gap-px bg-border">
               {CAPABILITIES.map((c) => (
-                <div key={c.n} className="p-5 bg-background hover:bg-card transition-colors">
-                  <span className="block text-foreground/50 text-xs font-bold mb-2 tracking-widest">{c.n}</span>
-                  <span className="font-bold uppercase text-sm tracking-wide">{c.label}</span>
+                <div key={c.n} className="p-5 bg-background hover:bg-card transition-colors flex items-center gap-4">
+                  <img src={c.icon} alt="" className="w-12 h-12 object-contain shrink-0" />
+                  <div>
+                    <span className="block text-foreground/50 text-xs font-bold mb-1 tracking-widest">{c.n}</span>
+                    <span className="font-bold uppercase text-sm tracking-wide">{c.label}</span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -104,10 +112,11 @@ const Index = () => {
           </div>
 
           {/* HQ */}
-          <div className="tile flex flex-col justify-center">
-            <div className="label-mono">Facility</div>
-            <div className="mt-3 font-bold uppercase tracking-wide">Advanced Instrumentation Lab</div>
-            <div className="text-foreground/60 text-sm mt-1">Class 1000 cleanroom · EMI shielded</div>
+          <div className="tile flex flex-col justify-center relative overflow-hidden">
+            <img src={groundStation.url} alt="" className="absolute -bottom-3 -right-3 w-24 h-24 opacity-30 pointer-events-none" />
+            <div className="label-mono relative z-10">Facility</div>
+            <div className="mt-3 font-bold uppercase tracking-wide relative z-10">Advanced Instrumentation Lab</div>
+            <div className="text-foreground/60 text-sm mt-1 relative z-10">Class 1000 cleanroom · EMI shielded</div>
           </div>
         </div>
 
