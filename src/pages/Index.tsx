@@ -30,7 +30,11 @@ const Index = () => {
           </div>
           <div className="hidden md:flex gap-8 text-xs font-semibold tracking-[0.2em] uppercase text-foreground/70">
             {NAV.map((l) => (
-              <a key={l} href="#" className="hover:text-foreground transition-colors">
+              <a
+                key={l}
+                href={l === "About" ? "/about" : "#"}
+                className="hover:text-foreground transition-colors"
+              >
                 {l}
               </a>
             ))}
