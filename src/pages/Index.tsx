@@ -1,19 +1,19 @@
-import emblem from "@/assets/icons/emblem.png.asset.json";
-import satellite from "@/assets/icons/satellite.png.asset.json";
-import earthOrbit from "@/assets/icons/earth-orbit.png.asset.json";
-import groundStation from "@/assets/icons/ground-station.png.asset.json";
-import magneticSensor from "@/assets/icons/magnetic-sensor.png.asset.json";
-import rfMicrowave from "@/assets/icons/rf-microwave.png.asset.json";
-import satelliteSystems from "@/assets/icons/satellite-systems.png.asset.json";
-import payloadElectronics from "@/assets/icons/payload-electronics.png.asset.json";
+import emblem from "@/assets/icons-local/emblem.png";
+import satellite from "@/assets/icons-local/satellite.png";
+import earthOrbit from "@/assets/icons-local/earth-orbit.png";
+import groundStation from "@/assets/icons-local/ground-station.png";
+import magneticSensor from "@/assets/icons-local/magnetic-sensor.png";
+import rfMicrowave from "@/assets/icons-local/rf-microwave.png";
+import satelliteSystems from "@/assets/icons-local/satellite-systems.png";
+import payloadElectronics from "@/assets/icons-local/payload-electronics.png";
 
 const NAV = ["Sensors", "Satellites", "Research", "About", "Contact"];
 
 const CAPABILITIES = [
-  { n: "01", label: "Magnetic Sensing", icon: magneticSensor.url },
-  { n: "02", label: "RF & Microwave", icon: rfMicrowave.url },
-  { n: "03", label: "Satellite Systems", icon: satelliteSystems.url },
-  { n: "04", label: "Payload Electronics", icon: payloadElectronics.url },
+  { n: "01", label: "Magnetic Sensing", icon: magneticSensor },
+  { n: "02", label: "RF & Microwave", icon: rfMicrowave },
+  { n: "03", label: "Satellite Systems", icon: satelliteSystems },
+  { n: "04", label: "Payload Electronics", icon: payloadElectronics },
 ];
 
 const Index = () => {
@@ -23,7 +23,7 @@ const Index = () => {
         {/* Header */}
         <nav className="flex justify-between items-center py-6 border-b border-border">
           <div className="flex items-center gap-3">
-            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9" />
+            <img src={emblem} alt="Martand emblem" className="w-9 h-9" />
             <div className="font-display text-2xl tracking-tighter uppercase">
               Martand<span className="text-foreground/50"> / Labs</span>
             </div>
@@ -49,7 +49,7 @@ const Index = () => {
           {/* Hero */}
           <div className="md:col-span-2 md:row-span-2 bg-card p-10 flex flex-col justify-end relative overflow-hidden border border-border">
             <img
-              src={earthOrbit.url}
+              src={earthOrbit}
               alt="Earth orbit"
               className="absolute top-8 right-8 w-72 h-72 object-contain opacity-40 pointer-events-none"
             />
@@ -81,7 +81,7 @@ const Index = () => {
 
           {/* Orbit Coverage */}
           <div className="tile flex flex-col justify-between relative overflow-hidden">
-            <img src={satellite.url} alt="" className="absolute -top-2 -right-2 w-28 h-28 opacity-30 pointer-events-none" />
+            <img src={satellite} alt="" className="absolute -top-2 -right-2 w-28 h-28 opacity-30 pointer-events-none" />
             <div className="label-mono relative z-10">Mission Envelope</div>
             <div className="font-display text-6xl relative z-10">LEO<span className="text-xl text-foreground/60"> · GEO</span></div>
             <div className="flex items-center gap-2 text-xs font-bold tracking-widest relative z-10">
@@ -117,7 +117,7 @@ const Index = () => {
 
           {/* HQ */}
           <div className="tile flex flex-col justify-center relative overflow-hidden">
-            <img src={groundStation.url} alt="" className="absolute -bottom-3 -right-3 w-24 h-24 opacity-30 pointer-events-none" />
+            <img src={groundStation} alt="" className="absolute -bottom-3 -right-3 w-24 h-24 opacity-30 pointer-events-none" />
             <div className="label-mono relative z-10">Facility</div>
             <div className="mt-3 font-bold uppercase tracking-wide relative z-10">Advanced Instrumentation Lab</div>
             <div className="text-foreground/60 text-sm mt-1 relative z-10">Class 1000 cleanroom · EMI shielded</div>
