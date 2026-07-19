@@ -60,7 +60,7 @@ const About = () => {
         {/* Header */}
         <nav className="flex justify-between items-center py-6 border-b border-border">
           <Link to="/" className="flex items-center gap-3">
-            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9" />
+            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9 invert" />
             <div className="font-display text-2xl tracking-tighter uppercase">
               Martand<span className="text-foreground/50"> / Labs</span>
             </div>
@@ -86,7 +86,7 @@ const About = () => {
         {/* Page title */}
         <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-3 tile flex flex-col justify-between min-h-[380px] relative overflow-hidden">
-            <img src={earthOrbit.url} alt="" className="absolute -right-6 -bottom-6 w-72 h-72 opacity-20 pointer-events-none" />
+            <img src={earthOrbit.url} alt="" className="absolute -right-6 -bottom-6 w-72 h-72 opacity-20 pointer-events-none invert" />
             <div className="label-mono relative z-10">About / 001</div>
             <h1 className="font-display text-5xl md:text-7xl uppercase leading-[0.9] relative z-10">
               Instruments <br />
@@ -139,7 +139,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {PILLARS.map((p) => (
               <div key={p.title} className="tile flex gap-5">
-                <img src={p.icon} alt="" className="w-16 h-16 object-contain shrink-0" />
+                <img src={p.icon} alt="" className="w-16 h-16 object-contain shrink-0 invert" />
                 <div>
                   <h3 className="font-display text-xl uppercase mb-2">{p.title}</h3>
                   <p className="text-foreground/70 text-sm leading-relaxed">{p.body}</p>
@@ -152,7 +152,7 @@ const About = () => {
         {/* Satellite mission narrative */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="tile md:col-span-2 relative overflow-hidden">
-            <img src={satellite.url} alt="" className="absolute -right-4 -bottom-4 w-56 h-56 opacity-25 pointer-events-none" />
+            <img src={satellite.url} alt="" className="absolute -right-4 -bottom-4 w-56 h-56 opacity-25 pointer-events-none invert" />
             <div className="label-mono mb-4 relative z-10">Satellite Program</div>
             <h2 className="font-display text-3xl md:text-4xl uppercase leading-tight mb-4 relative z-10">
               A magnetometer boom, a payload bus, a downlink you can trust.
@@ -162,7 +162,7 @@ const About = () => {
             </p>
           </div>
           <div className="tile flex flex-col justify-between relative overflow-hidden">
-            <img src={groundStation.url} alt="" className="absolute -right-3 -bottom-3 w-32 h-32 opacity-25 pointer-events-none" />
+            <img src={groundStation.url} alt="" className="absolute -right-3 -bottom-3 w-32 h-32 opacity-25 pointer-events-none invert" />
             <div className="label-mono relative z-10">Ground Segment</div>
             <div className="font-display text-2xl uppercase leading-tight relative z-10">
               Owned dish. <br /> Owned pipeline.

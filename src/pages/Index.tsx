@@ -23,7 +23,7 @@ const Index = () => {
         {/* Header */}
         <nav className="flex justify-between items-center py-6 border-b border-border">
           <div className="flex items-center gap-3">
-            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9" />
+            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9 invert" />
             <div className="font-display text-2xl tracking-tighter uppercase">
               Martand<span className="text-foreground/50"> / Labs</span>
             </div>
@@ -51,7 +51,7 @@ const Index = () => {
             <img
               src={earthOrbit.url}
               alt="Earth orbit"
-              className="absolute top-8 right-8 w-72 h-72 object-contain opacity-40 pointer-events-none"
+              className="absolute top-8 right-8 w-72 h-72 object-contain opacity-40 pointer-events-none invert"
             />
             <div className="label-mono mb-6 relative z-10">Engineering the next frontier</div>
             <h1 className="font-display text-5xl md:text-7xl leading-[0.9] uppercase mb-6 relative z-10">
@@ -81,7 +81,7 @@ const Index = () => {
 
           {/* Orbit Coverage */}
           <div className="tile flex flex-col justify-between relative overflow-hidden">
-            <img src={satellite.url} alt="" className="absolute -top-2 -right-2 w-28 h-28 opacity-30 pointer-events-none" />
+            <img src={satellite.url} alt="" className="absolute -top-2 -right-2 w-28 h-28 opacity-30 pointer-events-none invert" />
             <div className="label-mono relative z-10">Mission Envelope</div>
             <div className="font-display text-6xl relative z-10">LEO<span className="text-xl text-foreground/60"> · GEO</span></div>
             <div className="flex items-center gap-2 text-xs font-bold tracking-widest relative z-10">
@@ -96,7 +96,7 @@ const Index = () => {
             <div className="grid grid-cols-2 gap-px bg-border">
               {CAPABILITIES.map((c) => (
                 <div key={c.n} className="p-5 bg-background hover:bg-card transition-colors flex items-center gap-4">
-                  <img src={c.icon} alt="" className="w-12 h-12 object-contain shrink-0" />
+                  <img src={c.icon} alt="" className="w-12 h-12 object-contain shrink-0 invert" />
                   <div>
                     <span className="block text-foreground/50 text-xs font-bold mb-1 tracking-widest">{c.n}</span>
                     <span className="font-bold uppercase text-sm tracking-wide">{c.label}</span>
@@ -117,7 +117,7 @@ const Index = () => {
 
           {/* HQ */}
           <div className="tile flex flex-col justify-center relative overflow-hidden">
-            <img src={groundStation.url} alt="" className="absolute -bottom-3 -right-3 w-24 h-24 opacity-30 pointer-events-none" />
+            <img src={groundStation.url} alt="" className="absolute -bottom-3 -right-3 w-24 h-24 opacity-30 pointer-events-none invert" />
             <div className="label-mono relative z-10">Facility</div>
             <div className="mt-3 font-bold uppercase tracking-wide relative z-10">Advanced Instrumentation Lab</div>
             <div className="text-foreground/60 text-sm mt-1 relative z-10">Class 1000 cleanroom · EMI shielded</div>
