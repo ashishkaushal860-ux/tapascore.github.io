@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import emblem from "@/assets/icons/emblem.png.asset.json";
-import earthOrbit from "@/assets/icons/earth-orbit.png.asset.json";
-import satellite from "@/assets/icons/satellite.png.asset.json";
-import groundStation from "@/assets/icons/ground-station.png.asset.json";
-import magneticSensor from "@/assets/icons/magnetic-sensor.png.asset.json";
-import rfMicrowave from "@/assets/icons/rf-microwave.png.asset.json";
-import satelliteSystems from "@/assets/icons/satellite-systems.png.asset.json";
-import payloadElectronics from "@/assets/icons/payload-electronics.png.asset.json";
+import emblem from "@/assets/icons-local/emblem.png";
+import earthOrbit from "@/assets/icons-local/earth-orbit.png";
+import satellite from "@/assets/icons-local/satellite.png";
+import groundStation from "@/assets/icons-local/ground-station.png";
+import magneticSensor from "@/assets/icons-local/magnetic-sensor.png";
+import rfMicrowave from "@/assets/icons-local/rf-microwave.png";
+import satelliteSystems from "@/assets/icons-local/satellite-systems.png";
+import payloadElectronics from "@/assets/icons-local/payload-electronics.png";
 
 const NAV = [
   { label: "Sensors", href: "#" },
@@ -18,22 +18,22 @@ const NAV = [
 
 const PILLARS = [
   {
-    icon: magneticSensor.url,
+    icon: magneticSensor,
     title: "Magnetic Sensing",
     body: "Fluxgate, magnetoresistive, and optically-pumped instruments engineered for nanotesla-class resolution across space, defense, and geophysical applications.",
   },
   {
-    icon: rfMicrowave.url,
+    icon: rfMicrowave,
     title: "RF & Microwave",
     body: "Low-noise front ends, filters, and phased-array electronics validated with vector network analysis and characterized down to sub-picosecond timing.",
   },
   {
-    icon: satelliteSystems.url,
+    icon: satelliteSystems,
     title: "Satellite Systems",
     body: "End-to-end small-satellite subsystems — attitude determination, magnetometer booms, and thermal-vacuum qualified payload buses for LEO and GEO missions.",
   },
   {
-    icon: payloadElectronics.url,
+    icon: payloadElectronics,
     title: "Payload Electronics",
     body: "Rad-tolerant boards, FPGA signal chains, and mixed-signal ASIC integration built for continuous on-orbit operation.",
   },
@@ -60,7 +60,7 @@ const About = () => {
         {/* Header */}
         <nav className="flex justify-between items-center py-6 border-b border-border">
           <Link to="/" className="flex items-center gap-3">
-            <img src={emblem.url} alt="Martand emblem" className="w-9 h-9" />
+            <img src={emblem} alt="Martand emblem" className="w-9 h-9" />
             <div className="font-display text-2xl tracking-tighter uppercase">
               Martand<span className="text-foreground/50"> / Labs</span>
             </div>
@@ -86,7 +86,7 @@ const About = () => {
         {/* Page title */}
         <section className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-3 tile flex flex-col justify-between min-h-[380px] relative overflow-hidden">
-            <img src={earthOrbit.url} alt="" className="absolute -right-6 -bottom-6 w-72 h-72 opacity-20 pointer-events-none" />
+            <img src={earthOrbit} alt="" className="absolute -right-6 -bottom-6 w-72 h-72 opacity-20 pointer-events-none" />
             <div className="label-mono relative z-10">About / 001</div>
             <h1 className="font-display text-5xl md:text-7xl uppercase leading-[0.9] relative z-10">
               Instruments <br />
@@ -152,7 +152,7 @@ const About = () => {
         {/* Satellite mission narrative */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="tile md:col-span-2 relative overflow-hidden">
-            <img src={satellite.url} alt="" className="absolute -right-4 -bottom-4 w-56 h-56 opacity-25 pointer-events-none" />
+            <img src={satellite} alt="" className="absolute -right-4 -bottom-4 w-56 h-56 opacity-25 pointer-events-none" />
             <div className="label-mono mb-4 relative z-10">Satellite Program</div>
             <h2 className="font-display text-3xl md:text-4xl uppercase leading-tight mb-4 relative z-10">
               A magnetometer boom, a payload bus, a downlink you can trust.
@@ -162,7 +162,7 @@ const About = () => {
             </p>
           </div>
           <div className="tile flex flex-col justify-between relative overflow-hidden">
-            <img src={groundStation.url} alt="" className="absolute -right-3 -bottom-3 w-32 h-32 opacity-25 pointer-events-none" />
+            <img src={groundStation} alt="" className="absolute -right-3 -bottom-3 w-32 h-32 opacity-25 pointer-events-none" />
             <div className="label-mono relative z-10">Ground Segment</div>
             <div className="font-display text-2xl uppercase leading-tight relative z-10">
               Owned dish. <br /> Owned pipeline.
